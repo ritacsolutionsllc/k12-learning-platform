@@ -1,0 +1,6 @@
+- [ ] New table? Has enable + force RLS and policies in the same migration
+- [ ] Policy touching memberships uses the security-definer helpers
+- [ ] No `select('*')` in app code
+- [ ] No service role key reachable from the client
+- [ ] `supabase db reset` clean, `npm run test:rls` green
+- [ ] Schema change proposed before implementation
