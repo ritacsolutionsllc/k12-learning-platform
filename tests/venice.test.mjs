@@ -45,6 +45,12 @@ test('uses the Venice models and chat completion endpoints', async () => {
 });
 
 test('reports provider failures without including response contents', async () => {
-  globalThis.fetch = async () => ({ ok: false, status: 401 });
-  await assert.rejects(createVeniceClient('test-key').listModels(), /Venice request failed \(401\)/);
+  globalThis.fetch = async () => ({
+    ok: false,
+    status: 401,
+    text: async () => 'sensitive provider details',
+  });
+  await assert.rejects(createVeniceClient('test-key').listModels(), {
+    message: 'Venice request failed (401).',
+  });
 });
