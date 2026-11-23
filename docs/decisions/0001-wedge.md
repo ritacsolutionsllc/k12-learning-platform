@@ -2,8 +2,8 @@
 
 ## Status
 
-Approved project direction. Scope is frozen for 90 days from the date this
-record is merged.
+Approved project direction. The 90-day scope freeze begins 2026-11-23 and ends
+2027-02-21.
 
 ## Decision
 
@@ -13,7 +13,7 @@ record is merged.
 | Grades | 6-8 |
 | Subject and standards | Math using CCSS only |
 | Product | Downloadable packs and online lessons |
-| Application stack | Next.js 15, App Router, TypeScript, Supabase Postgres/RLS/private storage |
+| Application stack | Next.js 15.5.29, App Router, TypeScript, Supabase Postgres/RLS/private storage |
 | Payments | Stripe only at Phase 4 |
 
 Supabase RLS is the tenancy boundary. Private storage and authenticated

@@ -35,7 +35,8 @@ Phase 4), any subject outside math 6-8, any grade outside 6-8.
 
 ## Working agreement
 - One GitHub issue per branch, branch `p0.x/slug`, conventional commits.
-- Before claiming a migration works: `supabase db reset` then `npm run test:rls`.
+- Before claiming a migration works, once the Supabase schema and RLS harness
+  exist: `supabase db reset` then `npm run test:rls`.
 - If a task needs a schema change, propose the migration first and stop.
 - State assumptions in the PR description. Don't guess at the wedge.
 
